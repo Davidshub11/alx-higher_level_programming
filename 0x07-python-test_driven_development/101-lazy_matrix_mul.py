@@ -1,14 +1,12 @@
 #!/usr/bin/python3
-"""Defines a matrix multiplication function using NumPy."""
 import numpy as np
 
-
 def lazy_matrix_mul(m_a, m_b):
-    """Return the multiplication of two matrices.
+    try:
+        result = np.matmul(m_a, m_b)
+        return result.tolist()
+    except ValueError as ve:
+        raise ValueError(f"m_a and m_b can't be multiplied") from ve
+    except Exception as e:
+        raise e
 
-    Args:
-        m_a (list of lists of ints/floats): The first matrix.
-        m_b (list of lists of ints/floats): The second matrix.
-    """
-
-    return (np.matmul(m_a, m_b))
