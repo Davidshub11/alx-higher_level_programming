@@ -1,6 +1,6 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 
-const args = process.argv.slice(2); // Extracting command line arguments (excluding node and script name)
+const args = process.argv.slice(2);
 
 if (process.argv.length === 0) {
   console.log("No argument");
