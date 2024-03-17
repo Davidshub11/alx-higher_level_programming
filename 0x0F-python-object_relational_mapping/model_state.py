@@ -19,5 +19,5 @@ class state(Base):
     """
 
     __tablename__ = 'state'
-    id = column(Integer, Primary _key = True)
-    name = column(string(100), nullable = False)
+    id = column(Integer, Primary_key = True)
+    name = column(string(126), nullable = False)
